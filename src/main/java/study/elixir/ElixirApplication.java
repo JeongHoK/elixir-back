@@ -2,7 +2,7 @@ package study.elixir;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import module.BaseElixir;
+import study.elixir.module.BaseElixir;
 
 @SpringBootApplication
 public class ElixirApplication {

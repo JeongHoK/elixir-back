@@ -1,4 +1,4 @@
-package module;
+package study.elixir.module;
 
 import java.util.HashMap;
 import java.util.Map;
