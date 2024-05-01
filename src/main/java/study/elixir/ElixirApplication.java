@@ -11,20 +11,6 @@ public class ElixirApplication {
 		SpringApplication.run(ElixirApplication.class, args);
 
 
-		BaseElixir es =  new BaseElixir(14);
-
-		es.select("rebedo");
-		es.selectSimulation();
-		es.print();
-		es.resetSelectSimulation();
-		es.select("viriditas");
-		es.selectSimulation();
-		es.print();
-		es.resetSelectSimulation();
-		es.select("viriditas");
-		es.selectSimulation();
-		es.print();
-		es.resetSelectSimulation();
 
 
 	}
