@@ -3,7 +3,9 @@ package study.elixir.module;
 import org.springframework.stereotype.Component;
 import study.elixir.dto.ElixirDto;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class BaseElixir {
@@ -14,6 +16,7 @@ public class BaseElixir {
     private String selectWisePerson;
     private String beforeSelectWisePerson;
     private int beforeDuctilityCount;
+    private List<Map<String, Map<String, int[]>>> recordWisePersons;
 
     public BaseElixir(ElixirDto elixirDto) {
 
@@ -29,6 +32,7 @@ public class BaseElixir {
         this.selectWisePerson = elixirDto.getSelectWisePerson();
         this.totalDuctilityCount = elixirDto.getTotalDuctilityCount();
         this.beforeSelectWisePerson = elixirDto.getBeforeSelectWisePerson();
+        this.recordWisePersons = elixirDto.getRecordWisePersons();
 
     }
 
@@ -94,6 +98,13 @@ public class BaseElixir {
         elixirDto.setSelectWisePerson(this.selectWisePerson);
         elixirDto.setDuctilityCount(this.ductilityCount);
         elixirDto.setTotalDuctilityCount(this.totalDuctilityCount);
+
+
+        Map<String, Map<String, int[]>> map = new HashMap<>();
+        map.put(this.selectWisePerson, elixirDto.getWisePersons());
+
+        this.recordWisePersons.add(map);
+        elixirDto.setRecordWisePersons(this.recordWisePersons);
 
         return elixirDto;
 
