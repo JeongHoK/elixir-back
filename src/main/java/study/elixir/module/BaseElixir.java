@@ -67,18 +67,6 @@ public class BaseElixir {
 
     }
 
-    public void print() {
-        for (String wisePerson: this.wisePersons.keySet()) {
-            System.out.println(wisePerson);
-            for (int i = 0; i < this.totalDuctilityCount; i++) {
-                System.out.print(" " + this.wisePersons.get(wisePerson)[i]);
-            }
-            System.out.println();
-        }
-        System.out.println("ductilityCount: " + this.ductilityCount);
-        System.out.println("beforeSelectWisePerson: " + this.beforeSelectWisePerson);
-    }
-
     public void resetSelectSimulation() {
         for (String wisePerson: this.wisePersons.keySet()) {
             int[] wisePersonArray  = this.wisePersons.get(wisePerson);
